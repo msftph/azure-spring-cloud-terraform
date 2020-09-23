@@ -19,12 +19,12 @@ resource "azurerm_spring_cloud_service" "default" {
   sku_name            = "B0"
 
   config_server_git_setting {
-    uri          = "https://github.com/msftph/azure-spring-cloud-terraform.git"
-    label        = "config"
-    search_paths = ["dir1", "dir2"]
+    uri          = "git@github.com:msftph/azure-spring-cloud-terraform.git"
+    label        = "master"
+    search_paths = ["config"]
 
     ssh_auth{
-        private_key = file("private_key")
+        private_key = file(var.private_key_path)
     }
   }
 }

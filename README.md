@@ -17,7 +17,7 @@ Change the values in the terraform.tfvars file to the values that match your env
 ```tfvars
 resource_group = "spring_cloud"
 location = "East US"
-private_key_path = "private_key"
+private_key_path = "private_key_example"
 ```
 
 ## Run
